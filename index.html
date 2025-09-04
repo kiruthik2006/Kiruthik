@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem-Solving Challenges Solved</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 40px 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+
+        h2 {
+            color: #4a5568;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #2d3748;
+            margin: 30px 0 15px 0;
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+            font-size: 1.1rem;
+        }
+
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .challenge-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 30px;
+            border-radius: 15px;
+            color: white;
+            transform: translateY(0);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .challenge-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .challenge-card h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .challenge-card p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1rem;
+        }
+
+        .benefits {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            color: white;
+        }
+
+        .benefits h3 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .benefits ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .benefits li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .benefits li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            border-radius: 15px;
+            color: white;
+        }
+
+        .cta h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 10px;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.3);
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .challenge-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Problem-Solving Challenges Solved</h1>
+            <p class="subtitle">Hackathons, Competitions & Innovation Events</p>
+        </header>
+
+        <div class="content">
+            <h2>What Are Problem-Solving Challenges?</h2>
+            <p>Problem-solving challenges are intensive, collaborative events where individuals and teams come together to tackle real-world problems using creativity, technology, and innovation. These events, including hackathons, design sprints, and coding competitions, provide a platform for rapid prototyping and solution development.</p>
+
+            <div class="challenge-grid">
+                <div class="challenge-card">
+                    <h3>🚀 Hackathons</h3>
+                    <p>Intensive coding events where developers, designers, and entrepreneurs collaborate to build innovative solutions in 24-48 hours.</p>
+                </div>
+                
+                <div class="challenge-card">
+                    <h3>💡 Innovation Challenges</h3>
+                    <p>Corporate or academic competitions focused on solving specific industry problems with creative technological solutions.</p>
+                </div>
+                
+                <div class="challenge-card">
+                    <h3>🎯 Design Sprints</h3>
+                    <p>Fast-paced workshops where teams rapidly prototype and test solutions to user experience and design problems.</p>
+                </div>
+                
+                <div class="challenge-card">
+                    <h3>⚡ Startup Weekends</h3>
+                    <p>Entrepreneurial events where participants form teams, develop business models, and pitch startup ideas to judges.</p>
+                </div>
+            </div>
+
+            <h2>Popular Challenge Formats</h2>
+            
+            <h3>Virtual Hackathons</h3>
+            <p>Online events that bring together global participants to collaborate remotely on projects. These often focus on themes like sustainability, healthcare, or social impact.</p>
+            
+            <h3>Corporate Innovation Challenges</h3>
+            <p>Company-sponsored competitions where participants solve real business problems, often with the opportunity for winners to implement their solutions.</p>
+            
+            <h3>Academic Competitions</h3>
+            <p>University-hosted events that combine learning with practical application, helping students develop both technical and soft skills.</p>
+
+            <div class="benefits">
+                <h3>Benefits of Participating</h3>
+                <ul>
+                    <li>Rapid skill development and learning</li>
+                    <li>Networking with like-minded innovators</li>
+                    <li>Real-world problem-solving experience</li>
+                    <li>Portfolio building and project showcase</li>
+                    <li>Potential career opportunities and job offers</li>
+                    <li>Prize money and recognition</li>
+                    <li>Access to mentorship from industry experts</li>
+                    <li>Experience with cutting-edge technologies</li>
+                </ul>
+            </div>
+
+            <h2>Success Stories</h2>
+            <p>Many successful companies and products have emerged from hackathons and problem-solving challenges. From Twitter's initial concept being developed at a company hackathon to numerous startups finding their first breakthrough at weekend competitions, these events have proven to be powerful catalysts for innovation.</p>
+
+            <p>Participants often discover new career paths, form lasting partnerships, and gain confidence in their ability to tackle complex challenges under pressure.</p>
+
+            <div class="cta">
+                <h3>Ready to Join a Challenge?</h3>
+                <p>Start your problem-solving journey today and be part of the next wave of innovation!</p>
+                <a href="#" class="btn" onclick="alert('Find local hackathons on platforms like Devpost, Eventbrite, or Meetup!')">Find Events</a>
+                <a href="#" class="btn" onclick="alert('Build your skills with online coding challenges and practice problems!')">Practice Skills</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add some interactive functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.challenge-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.style.transform = this.style.transform === 'translateY(-10px) scale(1.05)' 
+                        ? 'translateY(0) scale(1)' 
+                        : 'translateY(-10px) scale(1.05)';
+                });
+            });
+
+            // Smooth scrolling animation observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            // Observe elements for animation
+            document.querySelectorAll('.challenge-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
